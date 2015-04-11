@@ -1,9 +1,19 @@
 * Readme
+
 ** Rationale
+
    This script exists to provide checks, handlers, and logging that make rsync backups safer and more user friendly. In addition, it provides and uses a simple wrapper libary that uses locks to prevent multiple rsync processes from running at the same time and thrashing the disks of a system.
+   
 ** Installation
+
 *** 1 Make sure script source directory is mapped to $PERL5LIB environment variable or $PATH:
+
     export PERL5LIB=$PERL5LIB':/home/user/rsync_automatic'
+
 *** 2 Set up configs in ./rsync_automatic/lib/config/ follow ./rsync_automatic/lib/config/example.pm for guidance.
+
 *** 3 Make sure new configurations are imported and mapped to the confighandler in rsync_automatic.pl
-*** 4 Optional: Point config to rotating daily backup directories 1 - 7 and set up rsync_automatic.pl to run as a cron or anacron.
+
+*** 4 Optional:
+
+Point config to rotating daily backup directories 1 - 7 and set up rsync_automatic.pl to run as a cron or anacron.
